@@ -8,9 +8,14 @@
 </head>
 <body>
 
+  <!-- Language Toggle -->
+  <div style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
+    <a href="#" class="lang-toggle">EN</a> | <a href="#" class="lang-toggle">ES</a>
+  </div>
+
   <!-- Header -->
   <header>
-    <div class="logo">
+    <div class="logo" style="margin: 0 auto;">
       <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
     </div>
     <nav class="navbar">
@@ -26,7 +31,7 @@
   <section class="hero fade-in">
     <div class="hero-text">
       <h1>Functional, Desirable Websites — Built to Perform</h1>
-      <p>Clean design. Reliable hosting. Designed for growth.</p>
+      <p>Clean design, fast hosting, and full support — from concept to launch.</p>
       <a href="https://your-intake-form-link.com" class="cta-button pulse">🚀 Start Your Project</a>
     </div>
   </section>
@@ -35,58 +40,104 @@
   <section id="services" class="services fade-in">
     <h2 class="section-title">Our Services</h2>
     <div class="service-cards">
+
       <div class="card slide-in-left">
-        <img src="placeholder1.jpg" alt="Business Website">
+        <img src="concept1.jpg" alt="Business Website" />
         <h3>Business Website</h3>
-        <p>Professional websites tailored to your brand.</p>
+        <p>Multi-page websites tailored to service-based businesses.</p>
+        <ul>
+          <li>Custom layout</li>
+          <li>Responsive & SEO-ready</li>
+          <li>Built to grow with your brand</li>
+        </ul>
         <a href="services.html#business" class="card-btn">Learn More</a>
       </div>
+
       <div class="card fade-in">
-        <img src="placeholder2.jpg" alt="Promo Site">
+        <img src="concept2.jpg" alt="Promo Site" />
         <h3>Promo Site</h3>
-        <p>Simple landing pages that get results.</p>
+        <p>One-page scroll sites for events, announcements, or micro-brands.</p>
+        <ul>
+          <li>Quick to launch</li>
+          <li>Clear CTA focus</li>
+          <li>Mobile-first structure</li>
+        </ul>
         <a href="services.html#promo" class="card-btn">Learn More</a>
       </div>
+
       <div class="card slide-in-right">
-        <img src="placeholder3.jpg" alt="E-Commerce">
-        <h3>E-Commerce</h3>
-        <p>Sell your products with a clean online store.</p>
-        <a href="services.html#ecommerce" class="card-btn">Learn More</a>
+        <img src="concept3.jpg" alt="Landing Page" />
+        <h3>Landing Page</h3>
+        <p>Built for conversions. Perfect for ad campaigns and product drops.</p>
+        <ul>
+          <li>Focused layout</li>
+          <li>Optimized for lead capture</li>
+          <li>Trackable performance</li>
+        </ul>
+        <a href="services.html#landing" class="card-btn">Learn More</a>
       </div>
-      <div class="card fade-in">
-        <img src="placeholder4.jpg" alt="Website Refresh">
-        <h3>Website Refresh</h3>
-        <p>Modernize your outdated website with impact.</p>
+
+      <div class="card slide-in-left">
+        <img src="concept4.jpg" alt="Web Refresh" />
+        <h3>Web Refresh</h3>
+        <p>Modernize your existing site with improved layout, speed, and visuals.</p>
+        <ul>
+          <li>No rebuild needed</li>
+          <li>UX and design upgrade</li>
+          <li>Better flow, faster load</li>
+        </ul>
         <a href="services.html#refresh" class="card-btn">Learn More</a>
       </div>
+
+      <div class="card fade-in">
+        <img src="concept5.jpg" alt="Domain & Hosting" />
+        <h3>Domain, Hosting & Renewal</h3>
+        <p>We handle everything from setup to SSL — fully managed and worry-free.</p>
+        <ul>
+          <li>Domain + DNS setup</li>
+          <li>Secure HTTPS hosting</li>
+          <li>Annual renewals covered</li>
+        </ul>
+        <a href="services.html#hosting" class="card-btn">Learn More</a>
+      </div>
+
+      <div class="card slide-in-right">
+        <img src="concept6.jpg" alt="Local Boost Site" />
+        <h3>Local Boost Site</h3>
+        <p>Get found on Google and drive local traffic with SEO-first site design.</p>
+        <ul>
+          <li>Google Maps & schema</li>
+          <li>Business info spotlight</li>
+          <li>Built for local discovery</li>
+        </ul>
+        <a href="services.html#localboost" class="card-btn">Learn More</a>
+      </div>
+
     </div>
   </section>
 
   <!-- CTA Banner -->
   <section class="cta-banner fade-in">
-    <h2>Ready to Build Something Beautiful?</h2>
-    <p>Let’s create a digital presence that performs.</p>
+    <h2>Let’s Build Something You’re Proud To Share</h2>
+    <p>Modern websites made simple, stylish, and effective.</p>
     <a href="https://your-intake-form-link.com" class="cta-button pulse">🚀 Start Your Project</a>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="contact fade-in">
-    <h2>Quick Question?</h2>
-    <p>Send us a message below or get started with your project above.</p>
+    <h2>Contact Us</h2>
+    <p>Have a question? Send us a quick message or get started above.</p>
     <form>
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p class="note">We usually respond within 24 hours.</p>
+    <p class="note">We respond within 1–2 business days.</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="lang-toggle">
-      <a href="#">EN</a> | <a href="#">ES</a>
-    </div>
     <div class="footer-links">
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
@@ -99,7 +150,7 @@
     <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
   </footer>
 
-  <!-- Animation Script -->
+  <!-- Scroll Animation Script -->
   <script>
     const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
     const observer = new IntersectionObserver((entries, obs) => {
