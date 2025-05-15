@@ -2,110 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZentroFlux Websites & Hosting</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="fade-in">
+<body>
+
   <!-- Header -->
-  <header class="header">
+  <header>
     <div class="logo">
-      <img src="logo.png" alt="ZentroFlux Logo" />
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#" class="lang-toggle">EN/ES</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text fade-in">
-      <h1>Functional, Desirable Websites — Built to Perform.</h1>
-      <p>Clean design. Reliable hosting. Built for businesses like yours.</p>
-      <a href="#intake" class="cta-button pulse">🚀 Start Your Project</a>
+  <!-- Hero -->
+  <section class="hero fade-in">
+    <div class="hero-text">
+      <h1>Functional, Desirable Websites — Built to Perform</h1>
+      <p>Clean design. Reliable hosting. Designed for growth.</p>
+      <a href="https://your-intake-form-link.com" class="cta-button pulse">🚀 Start Your Project</a>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services">
-    <h2 class="section-title fade-in">Our Services</h2>
+  <!-- Services -->
+  <section id="services" class="services fade-in">
+    <h2 class="section-title">Our Services</h2>
     <div class="service-cards">
-      <div class="card fade-in">
-        <img src="placeholder1.jpg" alt="Business Website" />
+      <div class="card slide-in-left">
+        <img src="placeholder1.jpg" alt="Business Website">
         <h3>Business Website</h3>
-        <p>Custom designs tailored to your brand and goals.</p>
-        <a href="services.html#business" class="card-btn">Explore</a>
+        <p>Professional websites tailored to your brand.</p>
+        <a href="services.html#business" class="card-btn">Learn More</a>
       </div>
       <div class="card fade-in">
-        <img src="placeholder2.jpg" alt="Promo Website" />
-        <h3>Promo Website</h3>
-        <p>Short-term, high-impact sites for launches and events.</p>
-        <a href="services.html#promo" class="card-btn">Explore</a>
+        <img src="placeholder2.jpg" alt="Promo Site">
+        <h3>Promo Site</h3>
+        <p>Simple landing pages that get results.</p>
+        <a href="services.html#promo" class="card-btn">Learn More</a>
+      </div>
+      <div class="card slide-in-right">
+        <img src="placeholder3.jpg" alt="E-Commerce">
+        <h3>E-Commerce</h3>
+        <p>Sell your products with a clean online store.</p>
+        <a href="services.html#ecommerce" class="card-btn">Learn More</a>
       </div>
       <div class="card fade-in">
-        <img src="placeholder3.jpg" alt="One Page Site" />
-        <h3>One Page Site</h3>
-        <p>Clean and simple. Everything your audience needs in one place.</p>
-        <a href="services.html#onepage" class="card-btn">Explore</a>
+        <img src="placeholder4.jpg" alt="Website Refresh">
+        <h3>Website Refresh</h3>
+        <p>Modernize your outdated website with impact.</p>
+        <a href="services.html#refresh" class="card-btn">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-banner">
-    <h2>Ready to bring your vision to life?</h2>
-    <a href="#intake" class="cta-button pulse">📋 Start Your Project</a>
+  <!-- CTA Banner -->
+  <section class="cta-banner fade-in">
+    <h2>Ready to Build Something Beautiful?</h2>
+    <p>Let’s create a digital presence that performs.</p>
+    <a href="https://your-intake-form-link.com" class="cta-button pulse">🚀 Start Your Project</a>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="intake">
-    <h2>Send Us a Message</h2>
-    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
+  <!-- Contact -->
+  <section id="contact" class="contact fade-in">
+    <h2>Quick Question?</h2>
+    <p>Send us a message below or get started with your project above.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p class="note">Looking to start your project? <a href="https://yourintakeform.com" target="_blank">Fill out our intake form here.</a></p>
+    <p class="note">We usually respond within 24 hours.</p>
   </section>
 
   <!-- Footer -->
   <footer>
+    <div class="lang-toggle">
+      <a href="#">EN</a> | <a href="#">ES</a>
+    </div>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
     </div>
     <div class="social-icons">
-      <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="icon-tiktok.png" alt="TikTok"></a>
-    </div>
-    <div class="lang-toggle">
-      <a href="#">EN/ES</a>
+      <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+      <a href="#"><img src="tiktok-icon.png" alt="TikTok" /></a>
     </div>
     <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
   </footer>
 
-  <!-- Optional JS for Animation -->
+  <!-- Animation Script -->
   <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    faders.forEach(fade => observer.observe(fade));
+    }, { threshold: 0.2 });
+
+    animatedElements.forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
