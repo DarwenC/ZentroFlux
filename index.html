@@ -4,13 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZentroFlux Websites & Hosting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+      min-width: 200px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Language Toggle -->
   <div style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
-    <a href="#" class="lang-toggle">EN</a> | <a href="#" class="lang-toggle">ES</a>
+    <a href="#">EN</a> | <a href="#">ES</a>
   </div>
 
   <!-- Header -->
@@ -20,8 +58,19 @@
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="index.html#services">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="business.html">Business Website</a></li>
+            <li><a href="promo.html">Promo Site</a></li>
+            <li><a href="landing.html">Landing Page</a></li>
+            <li><a href="refresh.html">Web Refresh</a></li>
+            <li><a href="hosting.html">Hosting & Renewal</a></li>
+            <li><a href="localboost.html">Local Boost Site</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -50,7 +99,7 @@
           <li>Responsive & SEO-ready</li>
           <li>Built to grow with your brand</li>
         </ul>
-        <a href="services.html#business" class="card-btn">Learn More</a>
+        <a href="business.html" class="card-btn">View Service</a>
       </div>
 
       <div class="card fade-in">
@@ -62,7 +111,7 @@
           <li>Clear CTA focus</li>
           <li>Mobile-first structure</li>
         </ul>
-        <a href="services.html#promo" class="card-btn">Learn More</a>
+        <a href="promo.html" class="card-btn">View Service</a>
       </div>
 
       <div class="card slide-in-right">
@@ -74,7 +123,7 @@
           <li>Optimized for lead capture</li>
           <li>Trackable performance</li>
         </ul>
-        <a href="services.html#landing" class="card-btn">Learn More</a>
+        <a href="landing.html" class="card-btn">View Service</a>
       </div>
 
       <div class="card slide-in-left">
@@ -86,11 +135,11 @@
           <li>UX and design upgrade</li>
           <li>Better flow, faster load</li>
         </ul>
-        <a href="services.html#refresh" class="card-btn">Learn More</a>
+        <a href="refresh.html" class="card-btn">View Service</a>
       </div>
 
       <div class="card fade-in">
-        <img src="concept5.jpg" alt="Domain & Hosting" />
+        <img src="concept5.jpg" alt="Hosting & Renewal" />
         <h3>Domain, Hosting & Renewal</h3>
         <p>We handle everything from setup to SSL — fully managed and worry-free.</p>
         <ul>
@@ -98,7 +147,7 @@
           <li>Secure HTTPS hosting</li>
           <li>Annual renewals covered</li>
         </ul>
-        <a href="services.html#hosting" class="card-btn">Learn More</a>
+        <a href="hosting.html" class="card-btn">View Service</a>
       </div>
 
       <div class="card slide-in-right">
@@ -110,7 +159,7 @@
           <li>Business info spotlight</li>
           <li>Built for local discovery</li>
         </ul>
-        <a href="services.html#localboost" class="card-btn">Learn More</a>
+        <a href="localboost.html" class="card-btn">View Service</a>
       </div>
 
     </div>
@@ -150,7 +199,7 @@
     <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
   </footer>
 
-  <!-- Scroll Animation Script -->
+  <!-- Scroll Animations -->
   <script>
     const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
     const observer = new IntersectionObserver((entries, obs) => {
@@ -161,7 +210,6 @@
         }
       });
     }, { threshold: 0.2 });
-
     animatedElements.forEach(el => observer.observe(el));
   </script>
 
