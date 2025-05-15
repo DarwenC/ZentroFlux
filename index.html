@@ -198,20 +198,34 @@
     </div>
     <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
   </footer>
+  
+<!-- Back to Top Button -->
+<button id="topBtn" onclick="scrollToTop()">↑ Top</button>
 
-  <!-- Scroll Animations -->
-  <script>
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    animatedElements.forEach(el => observer.observe(el));
-  </script>
+<!-- Scroll Animations -->
+<script>
+  const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  animatedElements.forEach(el => observer.observe(el));
+</script>
+
+<!-- Back to Top Logic -->
+<script>
+  window.onscroll = function() {
+    const btn = document.getElementById("topBtn");
+    btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 
 </body>
 </html>
