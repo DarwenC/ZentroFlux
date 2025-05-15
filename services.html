@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | ZentroFlux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo" style="margin: 0 auto;">
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#refresh">Refresh</a></li>
+        <li><a href="#localboost">Local Boost</a></li>
+        <li><a href="#hosting">Hosting</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SERVICE 1 -->
+    <section id="business" class="service-section fade-in">
+      <div class="service-content">
+        <img src="concept1.jpg" alt="Business Website" class="service-image" />
+        <div class="service-text">
+          <h2>Business Website</h2>
+          <p>Multi-page websites tailored to your brand and goals.</p>
+          <ul>
+            <li>Custom layout and design</li>
+            <li>SEO-ready & responsive</li>
+            <li>Integrated contact and about sections</li>
+          </ul>
+          <a href="https://your-intake-form-link.com" class="cta-button">Start This Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 2 -->
+    <section id="promo" class="service-section fade-in">
+      <div class="service-content reverse">
+        <img src="concept2.jpg" alt="Promo Site" class="service-image" />
+        <div class="service-text">
+          <h2>Promo Site</h2>
+          <p>Quick, stylish scroll-based websites to launch an idea fast.</p>
+          <ul>
+            <li>One-page layout</li>
+            <li>Focus on announcements or sales</li>
+            <li>CTA-driven and mobile optimized</li>
+          </ul>
+          <a href="https://your-intake-form-link.com" class="cta-button">Start This Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 3 -->
+    <section id="landing" class="service-section fade-in">
+      <div class="service-content">
+        <img src="concept3.jpg" alt="Landing Page" class="service-image" />
+        <div class="service-text">
+          <h2>Landing Page</h2>
+          <p>Pages made to convert — ideal for ads, products, and campaigns.</p>
+          <ul>
+            <li>Clear user journey and messaging</li>
+            <li>Form or button conversions</li>
+            <li>Trackable and scalable</li>
+          </ul>
+          <a href="https://your-intake-form-link.com" class="cta-button">Start This Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 4 -->
+    <section id="refresh" class="service-section fade-in">
+      <div class="service-content reverse">
+        <img src="concept4.jpg" alt="Web Refresh" class="service-image" />
+        <div class="service-text">
+          <h2>Web Refresh</h2>
+          <p>Modernize your existing site with new visuals and layout polish.</p>
+          <ul>
+            <li>UX improvements and speed upgrades</li>
+            <li>No need for full rebuild</li>
+            <li>Mobile-first approach</li>
+          </ul>
+          <a href="https://your-intake-form-link.com" class="cta-button">Start This Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 5 -->
+    <section id="hosting" class="service-section fade-in">
+      <div class="service-content">
+        <img src="concept5.jpg" alt="Domain & Hosting" class="service-image" />
+        <div class="service-text">
+          <h2>Domain, Hosting & Renewal</h2>
+          <p>We handle the tech — you just enjoy your live website.</p>
+          <ul>
+            <li>Domain setup + secure HTTPS</li>
+            <li>Hosting on GitHub or Netlify</li>
+            <li>Annual renewal reminders</li>
+          </ul>
+          <a href="https://your-intake-form-link.com" class="cta-button">Start This Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 6 -->
+    <section id="localboost" class="service-section fade-in">
+      <div class="service-content reverse">
+        <img src="concept6.jpg" alt="Local Boost Site" class="service-image" />
+        <div class="service-text">
+          <h2>Local Boost Site</h2>
+          <p>Designed to help local businesses show up on Google and connect with nearby customers.</p>
+          <ul>
+            <li>Google Maps + schema markup</li>
+            <li>Service area + business info display</li>
+            <li>Mobile and SEO-focused</li>
+          </ul>
+          <a href="https://your-intake-form-link.com" class="cta-button">Start This Project</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="social-icons">
+      <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+      <a href="#"><img src="tiktok-icon.png" alt="TikTok" /></a>
+    </div>
+    <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    const animatedSections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    animatedSections.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
