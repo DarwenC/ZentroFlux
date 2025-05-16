@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Website | ZentroFlux</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .sidebar {
+      width: 220px;
+      position: sticky;
+      top: 2rem;
+      background: #f4f6f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      height: fit-content;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: #0055aa;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .sidebar a.active {
+      font-weight: bold;
+      color: #0055aa;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .hero-service {
+      background: #eaf2ff;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-service h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .hero-service p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .features,
+    .how-it-works {
+      margin-bottom: 2rem;
+    }
+
+    .features ul,
+    .how-it-works ol {
+      margin-left: 1.2rem;
+      text-align: left;
+    }
+
+    .cta-button {
+      background-color: #0055aa;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .cta-banner {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f1f5fa;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
+    <a href="#">EN</a> | <a href="#">ES</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="index.html#services">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="business.html">Business Website</a></li>
+            <li><a href="promo.html">Promo Site</a></li>
+            <li><a href="landing.html">Landing Page</a></li>
+            <li><a href="refresh.html">Web Refresh</a></li>
+            <li><a href="hosting.html">Hosting & Renewal</a></li>
+            <li><a href="localboost.html">Local Boost Site</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <main class="page-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="business.html" class="active">Business Website</a></li>
+        <li><a href="promo.html">Promo Site</a></li>
+        <li><a href="landing.html">Landing Page</a></li>
+        <li><a href="refresh.html">Web Refresh</a></li>
+        <li><a href="hosting.html">Hosting & Renewal</a></li>
+        <li><a href="localboost.html">Local Boost Site</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+      <section class="hero-service fade-in">
+        <h1>Business Website Package</h1>
+        <p>A professional multi-page website tailored to your brand — mobile-optimized, SEO-ready, and designed for results.</p>
+      </section>
+
+      <section class="features fade-in">
+        <h2>What’s Included</h2>
+        <ul>
+          <li>Up to 3 responsive pages (e.g., Home, About, Contact)</li>
+          <li>Mobile-friendly, clean layout</li>
+          <li>Basic contact form setup</li>
+          <li>Integration of your logo, content, and images</li>
+          <li>SEO basics (meta titles, descriptions, image alt text)</li>
+          <li>1 round of design revisions</li>
+        </ul>
+      </section>
+
+      <section class="how-it-works fade-in">
+        <h2>How It Works</h2>
+        <ol>
+          <li><strong>Intake + Discovery:</strong> You fill out a quick form, send us your content, and we align on layout goals.</li>
+          <li><strong>Design + Review:</strong> We build your website, send you a draft, and make 1 round of changes as needed.</li>
+          <li><strong>Launch:</strong> Once approved and paid, we publish your live site or export it to your preferred host.</li>
+        </ol>
+      </section>
+
+      <section class="cta-banner fade-in">
+        <h2>Ready to Launch?</h2>
+        <p>Let’s get your business website online — professionally designed and ready in days.</p>
+        <a href="https://your-intake-form-link.com" class="cta-button">🚀 Start This Project</a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#services">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="social-icons">
+      <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+      <a href="#"><img src="tiktok-icon.png" alt="TikTok" /></a>
+    </div>
+    <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll Animations -->
+  <script>
+    const animated = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    animated.forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Back to Top Logic -->
+  <script>
+    window.onscroll = function() {
+      const btn = document.getElementById("topBtn");
+      btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
