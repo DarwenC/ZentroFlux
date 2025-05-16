@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | ZentroFlux</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
+    <a href="#">EN</a> | <a href="#">ES</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="index.html#services">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="business.html">Business Website</a></li>
+            <li><a href="promo.html">Promo Site</a></li>
+            <li><a href="landing.html">Landing Page</a></li>
+            <li><a href="refresh.html">Web Refresh</a></li>
+            <li><a href="hosting.html">Hosting & Renewal</a></li>
+            <li><a href="localboost.html">Local Boost Site</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="about-section fade-in" style="padding: 4rem 2rem; text-align: center;">
+      <h1>Who We Are</h1>
+      <p>ZentroFlux is a modern web studio focused on building clean, functional websites for local businesses, creators, and small brands.</p>
+    </section>
+
+    <section class="about-section fade-in" style="padding: 2rem 2rem; text-align: center;">
+      <h2>Our Mission</h2>
+      <p>To help businesses build an effective online presence without the tech confusion. We make websites that look great, load fast, and get results — all at an affordable rate.</p>
+    </section>
+
+    <section class="about-section fade-in" style="padding: 2rem 2rem; text-align: center;">
+      <h2>What We Offer</h2>
+      <p>From basic landing pages to full website makeovers, ZentroFlux handles design, hosting, and domain setup — all with a focus on simplicity and quality.</p>
+      <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+        <li>Clear, mobile-friendly design</li>
+        <li>Fast, secure hosting (managed by us)</li>
+        <li>Year-round support and renewals</li>
+      </ul>
+    </section>
+
+    <section class="about-section fade-in" style="padding: 2rem 2rem; text-align: center;">
+      <h2>Why ZentroFlux?</h2>
+      <p>We don’t just build websites — we build peace of mind. No bloated pricing, no complicated platforms. Just smart, stylish websites built to help you grow.</p>
+    </section>
+
+    <section class="cta-banner fade-in">
+      <h2>Let’s Start Your Project</h2>
+      <p>Need something simple, fast, and effective? We’re ready.</p>
+      <a href="https://your-intake-form-link.com" class="cta-button pulse">🚀 Start Your Project</a>
+    </section>
+
+  </main>
+
+  <!-- Back to Top -->
+  <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+      <a href="#"><img src="tiktok-icon.png" alt="TikTok" /></a>
+    </div>
+    <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
+  </footer>
+
+  <!-- Animations + Back to Top -->
+  <script>
+    const animatedSections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    animatedSections.forEach(el => observer.observe(el));
+
+    window.onscroll = function() {
+      const btn = document.getElementById("topBtn");
+      btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
