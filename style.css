@@ -107,35 +107,50 @@ header {
   width: 220px;
   position: sticky;
   top: 2rem;
-  background: #f4f6f9;
+  background: linear-gradient(to bottom right, #f6f9ff, #e3ecf7);
   padding: 2rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #0055aa;
   height: fit-content;
+  transition: box-shadow 0.3s;
+}
+
+.sidebar:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h3 {
   margin-top: 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #0055aa;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .sidebar ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .sidebar a {
   text-decoration: none;
   color: #333;
-  transition: color 0.2s;
+  font-weight: 500;
+  display: inline-block;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .sidebar a:hover {
+  background-color: #eaf2ff;
   color: #0055aa;
 }
 
@@ -234,6 +249,8 @@ header {
   align-items: center;
   text-align: center;
   transition: transform 0.3s;
+}
+
 .card ul {
   padding-left: 0;
   list-style-position: inside;
@@ -288,10 +305,12 @@ header {
   width: 100%;
   max-width: 300px;
 }
+
 .contact button:hover {
   background-color: #004080;
 }
-  /* Set background image site-wide */
+
+/* Background Image Layer */
 body::before {
   content: "";
   position: fixed;
@@ -299,69 +318,12 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('background.png'); /* Upload this image to your repo */
+  background-image: url('background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.07; /* Adjust to taste */
+  opacity: 0.07;
   z-index: -1;
-}
-  
-/* Enhanced sidebar styling */
-.sidebar {
-  width: 220px;
-  position: sticky;
-  top: 2rem;
-  background: linear-gradient(to bottom right, #f6f9ff, #e3ecf7);
-  padding: 2rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #0055aa;
-  height: fit-content;
-  transition: box-shadow 0.3s;
-}
-
-.sidebar:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #0055aa;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  display: inline-block;
-  padding: 0.5rem 0;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.sidebar a:hover {
-  background-color: #eaf2ff;
-  color: #0055aa;
-}
-
-.sidebar a.active {
-  font-weight: bold;
-  color: #0055aa;
 }
 
 /* CTA */
