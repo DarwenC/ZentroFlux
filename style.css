@@ -1,12 +1,26 @@
-/* style.css */
-
-/* BASE STYLES */
+/* === GLOBAL STYLES === */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom, #f7faff 0%, #f4f4f4 100%);
   color: #222;
   scroll-behavior: smooth;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+  z-index: -1;
 }
 
 img {
@@ -14,7 +28,7 @@ img {
   height: auto;
 }
 
-/* HEADER */
+/* === HEADER === */
 header {
   display: flex;
   flex-direction: column;
@@ -37,7 +51,7 @@ header {
   max-width: 100%;
 }
 
-/* NAVBAR */
+/* === NAVBAR === */
 .navbar {
   position: relative;
   margin-top: 0.75rem;
@@ -94,120 +108,11 @@ header {
 .navbar .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* SERVICE PAGE LAYOUT */
-.page-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.sidebar {
-  width: 220px;
-  position: sticky;
-  top: 2rem;
-  background: linear-gradient(to bottom right, #f6f9ff, #e3ecf7);
-  padding: 2rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #0055aa;
-  height: fit-content;
-  transition: box-shadow 0.3s;
-}
-
-.sidebar:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #0055aa;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  display: inline-block;
-  padding: 0.5rem 0;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.sidebar a:hover {
-  background-color: #eaf2ff;
-  color: #0055aa;
-}
-
-.sidebar a.active {
-  font-weight: bold;
-  color: #0055aa;
-}
-
-.main-content {
-  flex: 1;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-}
-
-.hero-service {
-  background: #eaf2ff;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.hero-service h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.hero-service p {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
-
-.features,
-.how-it-works {
-  margin-bottom: 2rem;
-}
-
-.features h2,
-.how-it-works h2 {
-  border-bottom: 2px solid #0055aa;
-  display: inline-block;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-.features ul,
-.how-it-works ol {
-  margin-left: 1.2rem;
-  text-align: left;
-}
-
-/* HOMEPAGE */
+/* === HOMEPAGE === */
 .hero {
   background: linear-gradient(to right, #e0ecff, #f7f9fc);
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 3rem;
 }
 
 .hero-text h1 {
@@ -217,7 +122,7 @@ header {
 
 .hero-text p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .services {
@@ -271,16 +176,54 @@ header {
   text-decoration: none;
 }
 
-/* CONTACT */
+/* === CTA SECTION === */
+.cta-banner {
+  background: #eaf2ff;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.cta-button {
+  background-color: #0055aa;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  box-shadow: 0 5px 15px rgba(0,85,170,0.3);
+  transform: translateY(-3px);
+}
+
+/* === CONTACT SECTION === */
+.contact-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contact-section h2 {
+  margin-bottom: 1rem;
+}
+
 .contact form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
 .contact input,
@@ -310,49 +253,130 @@ header {
   background-color: #004080;
 }
 
-/* Background Image Layer */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.07;
-  z-index: -1;
+/* === PRICE BADGE === */
+.price-badge {
+  display: inline-block;
+  background-color: #0055aa;
+  color: #fff;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  margin-top: 0.5rem;
+}
+/* === SERVICE PAGE LAYOUT === */
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-/* CTA */
-.cta-banner {
+.main-content {
+  flex: 1;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.hero-service {
   background: #eaf2ff;
-  text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem;
   border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero-service h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.hero-service p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* === HOW IT WORKS CARDS === */
+.how-it-works-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
   margin-top: 2rem;
 }
 
-.cta-button {
-  background-color: #0055aa;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
+.how-card {
+  flex: 1 1 280px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.how-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+/* === SIDEBAR (FULL HIGHLIGHT) === */
+.sidebar {
+  width: 220px;
+  position: sticky;
+  top: 2rem;
+  background: linear-gradient(to bottom right, #f6f9ff, #e3ecf7);
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #0055aa;
+  height: fit-content;
+  transition: box-shadow 0.3s;
+}
+
+.sidebar:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #0055aa;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.75rem 1rem;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: #333;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.cta-button:hover {
-  box-shadow: 0 5px 15px rgba(0,85,170,0.3);
-  transform: translateY(-3px);
+.sidebar a:hover {
+  background-color: #eaf2ff;
+  color: #0055aa;
 }
 
-/* FOOTER */
+.sidebar a.active {
+  background-color: #d6e9ff;
+  color: #0055aa;
+  font-weight: bold;
+}
+/* === FOOTER === */
 footer {
   background: #f4f6f9;
   padding: 2rem 1rem;
@@ -367,18 +391,26 @@ footer {
   font-weight: 500;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
 .social-icons img {
   height: 24px;
-  margin: 0 0.5rem;
 }
 
-.footer-note {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: #666;
+/* === ABOUT PAGE === */
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
-/* UTILITIES */
+/* === UTILITIES === */
 #topBtn {
   position: fixed;
   bottom: 2rem;
@@ -399,7 +431,7 @@ footer {
   background-color: #003f88;
 }
 
-/* ANIMATIONS */
+/* === ANIMATIONS === */
 .pulse {
   animation: pulse 2s infinite;
 }
@@ -443,7 +475,7 @@ footer {
   transform: translateX(0);
 }
 
-/* RESPONSIVE */
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
   .page-wrapper {
     flex-direction: column;
@@ -465,5 +497,9 @@ footer {
 
   .cta-button {
     font-size: 0.9rem;
+  }
+
+  .how-it-works-cards {
+    flex-direction: column;
   }
 }
