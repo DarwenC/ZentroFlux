@@ -226,8 +226,9 @@ header {
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  width: 100%;
+  width: 90%;
   box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  max-width: 450px;
 }
 
 .contact-wrapper button {
