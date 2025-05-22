@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-key="nav.hosting">Hosting & Renewal | ZentroFlux</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div class="language-toggle" style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
+    <a href="#" onclick="setLanguage('en')">EN</a> | 
+    <a href="#" onclick="setLanguage('es')">ES</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" data-key="nav.home">Home</a></li>
+        <li class="dropdown">
+          <a href="index.html#services" data-key="nav.services">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="business.html" data-key="nav.business">Business Website</a></li>
+            <li><a href="promo.html" data-key="nav.promo">Promo Site</a></li>
+            <li><a href="starter.html" data-key="nav.starter">Starter Website</a></li>
+            <li><a href="landing.html" data-key="nav.landing">Landing Page</a></li>
+            <li><a href="hosting.html" class="active" data-key="nav.hosting">Hosting & Renewal</a></li>
+            <li><a href="localboost.html" data-key="nav.local">Local Boost Site</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" data-key="nav.contact">Contact</a></li>
+        <li><a href="about.html" data-key="nav.about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Layout -->
+  <main class="page-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3 data-key="services.heading">Our Services</h3>
+      <ul>
+        <li><a href="business.html" data-key="nav.business">Business Website</a></li>
+        <li><a href="promo.html" data-key="nav.promo">Promo Site</a></li>
+        <li><a href="starter.html" data-key="nav.starter">Starter Website</a></li>
+        <li><a href="landing.html" data-key="nav.landing">Landing Page</a></li>
+        <li><a href="hosting.html" class="active" data-key="nav.hosting">Hosting & Renewal</a></li>
+        <li><a href="localboost.html" data-key="nav.local">Local Boost Site</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+      <section class="hero-service fade-in">
+        <h1 data-key="card.hosting.title">Hosting & Renewal</h1>
+        <span class="price-badge" data-key="hosting.price">Renewal: $99/year</span>
+        <p data-key="card.hosting.desc">Reliable hosting for ZentroFlux-built websites, with optional file transfer and light support included.</p>
+      </section>
+
+      <section class="features fade-in">
+        <h2 data-key="features.heading">What’s Included</h2>
+        <ul>
+          <li data-key="card.hosting.point1">Hosting via GitHub Pages or equivalent</li>
+          <li data-key="card.hosting.point2">Domain name connection</li>
+          <li data-key="hosting.point3">Basic uptime monitoring</li>
+          <li data-key="hosting.point4">1 minor content update (within 30 days of launch)</li>
+          <li data-key="hosting.point5">Editor/admin access on request</li>
+        </ul>
+      </section>
+
+      <section class="how-it-works fade-in">
+        <h2 data-key="how.title">How It Works</h2>
+        <div class="how-it-works-cards">
+          <div class="how-card">
+            <h3 data-key="how.step1.title">1. Initial Setup</h3>
+            <p data-key="hosting.step1.desc">First-year hosting is included with most website packages.</p>
+          </div>
+          <div class="how-card">
+            <h3 data-key="how.step2.title">2. Annual Renewal</h3>
+            <p data-key="hosting.step2.desc">We’ll invoice you $99/year with a 30-day notice before your next cycle.</p>
+          </div>
+          <div class="how-card">
+            <h3 data-key="how.step3.title">3. Transfer if Needed</h3>
+            <p data-key="hosting.step3.desc">Need to host it yourself? We’ll provide a ZIP or GitHub repo on request.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="fade-in">
+        <img src="hosting-preview.jpg" alt="Hosting and domain management preview" style="border-radius: 8px; max-width: 100%; margin-top: 1rem;">
+      </section>
+
+      <section class="cta-banner fade-in">
+        <h2 data-key="hosting.cta.title">Need to Renew or Transfer Hosting?</h2>
+        <p data-key="hosting.cta.desc">Let’s keep your website running strong — or help you migrate with confidence.</p>
+        <a href="intake.html" class="cta-button" data-key="hosting.cta.button">💾 Manage My Hosting</a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#services" data-key="footer.services">Services</a>
+      <a href="contact.html" data-key="footer.contact">Contact</a>
+      <a href="about.html" data-key="footer.about">About</a>
+    </div>
+    <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
+  </footer>
+
+  <!-- Language & Interaction Scripts -->
+  <script>
+    const translations = {
+      en: {
+        "nav.home": "Home",
+        "nav.services": "Services",
+        "nav.contact": "Contact",
+        "nav.about": "About",
+        "nav.business": "Business Website",
+        "nav.promo": "Promo Site",
+        "nav.starter": "Starter Website",
+        "nav.landing": "Landing Page",
+        "nav.hosting": "Hosting & Renewal",
+        "nav.local": "Local Boost Site",
+        "services.heading": "Our Services",
+        "card.hosting.title": "Hosting & Renewal",
+        "card.hosting.desc": "Reliable hosting for ZentroFlux-built websites, with optional file transfer and light support included.",
+        "card.hosting.point1": "Hosting via GitHub Pages or equivalent",
+        "card.hosting.point2": "Domain name connection",
+        "hosting.point3": "Basic uptime monitoring",
+        "hosting.point4": "1 minor content update (within 30 days of launch)",
+        "hosting.point5": "Editor/admin access on request",
+        "features.heading": "What’s Included",
+        "how.title": "How It Works",
+        "how.step1.title": "1. Initial Setup",
+        "how.step2.title": "2. Annual Renewal",
+        "how.step3.title": "3. Transfer if Needed",
+        "hosting.step1.desc": "First-year hosting is included with most website packages.",
+        "hosting.step2.desc": "We’ll invoice you $99/year with a 30-day notice before your next cycle.",
+        "hosting.step3.desc": "Need to host it yourself? We’ll provide a ZIP or GitHub repo on request.",
+        "hosting.cta.title": "Need to Renew or Transfer Hosting?",
+        "hosting.cta.desc": "Let’s keep your website running strong — or help you migrate with confidence.",
+        "hosting.cta.button": "💾 Manage My Hosting",
+        "hosting.price": "Renewal: $99/year",
+        "footer.services": "Services",
+        "footer.contact": "Contact",
+        "footer.about": "About"
+      },
+      es: {
+        "nav.home": "Inicio",
+        "nav.services": "Servicios",
+        "nav.contact": "Contacto",
+        "nav.about": "Acerca de",
+        "nav.business": "Sitio Web Empresarial",
+        "nav.promo": "Sitio Promocional",
+        "nav.starter": "Sitio Inicial",
+        "nav.landing": "Página de Aterrizaje",
+        "nav.hosting": "Dominio y Hosting",
+        "nav.local": "Impulso Local",
+        "services.heading": "Nuestros Servicios",
+        "card.hosting.title": "Dominio, Hosting y Renovación",
+        "card.hosting.desc": "Alojamiento confiable para sitios de ZentroFlux, con transferencia opcional y soporte ligero.",
+        "card.hosting.point1": "Hosting a través de GitHub Pages o equivalente",
+        "card.hosting.point2": "Conexión del nombre de dominio",
+        "hosting.point3": "Monitoreo básico de disponibilidad",
+        "hosting.point4": "1 actualización menor dentro de los 30 días del lanzamiento",
+        "hosting.point5": "Acceso de editor/admin bajo solicitud",
+        "features.heading": "¿Qué incluye?",
+        "how.title": "Cómo Funciona",
+        "how.step1.title": "1. Configuración Inicial",
+        "how.step2.title": "2. Renovación Anual",
+        "how.step3.title": "3. Transferencia si es Necesario",
+        "hosting.step1.desc": "El primer año de hosting está incluido con la mayoría de nuestros paquetes.",
+        "hosting.step2.desc": "Te enviaremos una factura de $99/año con 30 días de anticipación.",
+        "hosting.step3.desc": "¿Quieres alojarlo tú mismo? Te entregamos un ZIP o acceso a repositorio.",
+        "hosting.cta.title": "¿Necesitas Renovar o Transferir Hosting?",
+        "hosting.cta.desc": "Mantengamos tu sitio activo — o te ayudamos a migrarlo con confianza.",
+        "hosting.cta.button": "💾 Gestionar Mi Hosting",
+        "hosting.price": "Renovación: $99/año",
+        "footer.services": "Servicios",
+        "footer.contact": "Contacto",
+        "footer.about": "Acerca de"
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('preferredLanguage', lang);
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const lang = localStorage.getItem('preferredLanguage') || 'en';
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      applyLanguage();
+
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      animatedElements.forEach(el => observer.observe(el));
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+<script>
+  window.onscroll = function () {
+    const btn = document.getElementById("topBtn");
+    if (!btn) return;
+    btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+      ? "block"
+      : "none";
+  };
+</script>
+</body>
+</html>
