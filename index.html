@@ -146,7 +146,7 @@
   <section id="contact" class="contact-wrapper fade-in">
     <h2 data-key="contact.title">Contact Us</h2>
     <p data-key="contact.subtitle">Have a question? Send us a quick message or get started above.</p>
-    <form action="https://formspree.io/f/xldbkgkg" method="POST">
+    <form action="https://formspree.io/f/xldbkgkg" method="POST" onsubmit="redirectThankYou(event)">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
