@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-key="nav.about">About | ZentroFlux Websites & Hosting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div class="language-toggle" style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
+    <a href="#" onclick="setLanguage('en')">EN</a> | 
+    <a href="#" onclick="setLanguage('es')">ES</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" data-key="nav.home">Home</a></li>
+        <li class="dropdown">
+          <a href="index.html#services" data-key="nav.services">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="business.html" data-key="nav.business">Business Website</a></li>
+            <li><a href="promo.html" data-key="nav.promo">Promo Site</a></li>
+            <li><a href="starter.html" data-key="nav.starter">Starter Website</a></li>
+            <li><a href="landing.html" data-key="nav.landing">Landing Page</a></li>
+            <li><a href="hosting.html" data-key="nav.hosting">Hosting & Renewal</a></li>
+            <li><a href="localboost.html" data-key="nav.local">Local Boost Site</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" data-key="nav.contact">Contact</a></li>
+        <li><a href="about.html" class="active" data-key="nav.about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main About Content -->
+  <main class="about fade-in">
+    <section class="about-section">
+      <h2 data-key="about.mission.title">Our Mission</h2>
+      <p data-key="about.mission.text">At ZentroFlux, we create modern, accessible, and powerful websites for local businesses who are ready to grow. Whether you’re just starting out or need a digital refresh, our mission is to provide professional tools that look great and perform even better.</p>
+    </section>
+
+    <section class="about-section">
+      <h2 data-key="about.why.title">Why We Do It</h2>
+      <p data-key="about.why.text">We believe every business deserves a strong online presence—without the tech headaches. Our work is driven by passion, efficiency, and the understanding that your website is more than a page... it's your brand's first impression.</p>
+    </section>
+
+    <section class="about-section">
+      <h2 data-key="about.who.title">Who We Are</h2>
+      <p data-key="about.who.text">ZentroFlux is a creative web studio led by one dedicated designer/developer with a network of trusted collaborators. This allows us to provide high-quality websites and hosting with the personal attention of a solo expert and the flexibility of a team when needed.</p>
+    </section>
+  </main>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner fade-in">
+    <h2 data-key="cta.title">Let’s Build Something You’re Proud To Share</h2>
+    <p data-key="cta.subtitle">Modern websites made simple, stylish, and effective.</p>
+    <a href="intake.html" class="cta-button pulse bottom-space" data-key="cta.button">🚀 Start Your Project</a>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#services" data-key="footer.services">Services</a>
+      <a href="contact.html" data-key="footer.contact">Contact</a>
+      <a href="about.html" class="active" data-key="footer.about">About</a>
+    </div>
+    <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const translations = {
+      en: {
+        "nav.home": "Home",
+        "nav.services": "Services",
+        "nav.contact": "Contact",
+        "nav.about": "About",
+        "nav.business": "Business Website",
+        "nav.promo": "Promo Site",
+        "nav.starter": "Starter Website",
+        "nav.landing": "Landing Page",
+        "nav.hosting": "Hosting & Renewal",
+        "nav.local": "Local Boost Site",
+        "footer.services": "Services",
+        "footer.contact": "Contact",
+        "footer.about": "About",
+        "about.mission.title": "Our Mission",
+        "about.mission.text": "At ZentroFlux, we create modern, accessible, and powerful websites for local businesses who are ready to grow. Whether you’re just starting out or need a digital refresh, our mission is to provide professional tools that look great and perform even better.",
+        "about.why.title": "Why We Do It",
+        "about.why.text": "We believe every business deserves a strong online presence—without the tech headaches. Our work is driven by passion, efficiency, and the understanding that your website is more than a page... it's your brand's first impression.",
+        "about.who.title": "Who We Are",
+        "about.who.text": "ZentroFlux is a creative web studio led by one dedicated designer/developer with a network of trusted collaborators. This allows us to provide high-quality websites and hosting with the personal attention of a solo expert and the flexibility of a team when needed.",
+        "cta.title": "Let’s Build Something You’re Proud To Share",
+        "cta.subtitle": "Modern websites made simple, stylish, and effective.",
+        "cta.button": "🚀 Start Your Project",
+      },
+      es: {
+        "nav.home": "Inicio",
+        "nav.services": "Servicios",
+        "nav.contact": "Contacto",
+        "nav.about": "Acerca de",
+        "nav.business": "Sitio Web Empresarial",
+        "nav.promo": "Sitio Promocional",
+        "nav.starter": "Sitio Inicial",
+        "nav.landing": "Página de Aterrizaje",
+        "nav.hosting": "Dominio y Hosting",
+        "nav.local": "Impulso Local",
+        "footer.services": "Servicios",
+        "footer.contact": "Contacto",
+        "footer.about": "Acerca de",
+        "about.mission.title": "Nuestra Misión",
+        "about.mission.text": "En ZentroFlux, creamos sitios web modernos, accesibles y potentes para negocios locales listos para crecer. Ya sea que estés comenzando o necesites una renovación digital, nuestra misión es ofrecer herramientas profesionales que se vean bien y funcionen aún mejor.",
+        "about.why.title": "Por Qué Lo Hacemos",
+        "about.why.text": "Creemos que todo negocio merece una fuerte presencia en línea, sin dolores de cabeza tecnológicos. Nuestro trabajo está impulsado por la pasión, la eficiencia y la comprensión de que tu sitio es más que una página... es la primera impresión de tu marca.",
+        "about.who.title": "Quiénes Somos",
+        "about.who.text": "ZentroFlux es un estudio web creativo dirigido por un diseñador/desarrollador dedicado con una red de colaboradores confiables. Esto nos permite ofrecer sitios web de alta calidad y alojamiento con la atención personal de un experto individual y la flexibilidad de un equipo cuando se necesita.",
+        "cta.title": "Construyamos algo de lo que estés orgulloso/a",
+        "cta.subtitle": "Sitios modernos hechos simples, elegantes y efectivos.",
+        "cta.button": "🚀 Comienza tu Proyecto",
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('preferredLanguage', lang);
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const lang = localStorage.getItem('preferredLanguage') || 'en';
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      applyLanguage();
+
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      animatedElements.forEach(el => observer.observe(el));
+
+      window.onscroll = function () {
+        const btn = document.getElementById("topBtn");
+        if (!btn) return;
+        btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+          ? "block"
+          : "none";
+      };
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
