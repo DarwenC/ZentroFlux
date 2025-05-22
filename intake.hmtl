@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-key="intake.title">ZentroFlux Client Intake Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Language Toggle -->
+  <div class="language-toggle" style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
+    <a href="#" onclick="setLanguage('en')">EN</a> | 
+    <a href="#" onclick="setLanguage('es')">ES</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" data-key="nav.home">Home</a></li>
+        <li class="dropdown">
+          <a href="index.html#services" data-key="nav.services">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="business.html" data-key="nav.business">Business Website</a></li>
+            <li><a href="promo.html" data-key="nav.promo">Promo Site</a></li>
+            <li><a href="starter.html" data-key="nav.starter">Starter Website</a></li>
+            <li><a href="landing.html" data-key="nav.landing">Landing Page</a></li>
+            <li><a href="hosting.html" data-key="nav.hosting">Hosting & Renewal</a></li>
+            <li><a href="localboost.html" data-key="nav.local">Local Boost Site</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" data-key="nav.contact">Contact</a></li>
+        <li><a href="about.html" data-key="nav.about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Intake Form -->
+  <main class="intake-wrapper">
+    <h1 data-key="intake.heading">ZentroFlux Client Intake Form</h1>
+    <form action="https://formspree.io/f/xldbkgkg" method="POST" onsubmit="redirectThankYou(event)">
+      <input type="hidden" name="Form Type" value="ZentroFlux Intake Form">
+      <input type="hidden" name="_redirect" value="thankyou.html">
+
+      <div class="form-section">
+        <h3 data-key="intake.clientinfo">Client Information</h3>
+        <label data-key="intake.name">Full Name:</label>
+        <input type="text" name="Full Name" required>
+
+        <label data-key="intake.business">Business Name:</label>
+        <input type="text" name="Business Name">
+
+        <label data-key="intake.email">Email Address:</label>
+        <input type="email" name="Email" required>
+
+        <label data-key="intake.phone">Phone Number (optional):</label>
+        <input type="text" name="Phone">
+
+        <label data-key="intake.contact">Preferred Method of Contact:</label>
+        <select name="Preferred Contact">
+        <option data-key="option.email">Email</option>
+        <option data-key="option.phone">Phone</option>
+        <option data-key="option.text">Text</option>
+        <option data-key="option.whatsapp">WhatsApp</option>
+      </select>
+
+      </div>
+
+      <div class="form-section">
+        <h3 data-key="intake.project">Website Project Details</h3>
+        <label><input type="checkbox" name="Service[]" value="Starter Website"> <span data-key="service.starter">Starter Website (1–3 pages)</span></label><br>
+        <label><input type="checkbox" name="Service[]" value="Business Website"> <span data-key="service.business">Business Website (5–7 pages)</span></label><br>
+        <label><input type="checkbox" name="Service[]" value="Promo Site"> <span data-key="service.promo">One-Page Promo Site</span></label><br>
+        <label><input type="checkbox" name="Service[]" value="Landing Page"> <span data-key="service.landing">One-Page Landing Page</span></label><br>
+        <label><input type="checkbox" name="Service[]" value="Local Boost"> <span data-key="service.local">Local Boost Setup</span></label><br>
+        <label><input type="checkbox" name="Service[]" value="Local Boost Lite"> <span data-key="service.litelocal">Local Boost Setup [LITE]</span></label><br>
+        <label><input type="checkbox" name="Service[]" value="Hosting"> <span data-key="service.hosting">Hosting/Renewal</span></label><br>
+        <label><input type="checkbox" name="Service[]" value="Maintenance"> <span data-key="service.maintenance">Monthly Maintenance</span></label><br>
+
+        <label data-key="intake.other">Other:</label>
+        <input type="text" name="Other Services">
+        <label data-key="intake.pages">What pages do you need?</label>
+        <textarea name="Desired Pages" rows="3"></textarea>
+        <label data-key="intake.website">Do you currently have a website?</label>
+        <select name="Existing Website">
+          <option value="No" data-key="option.no">No</option>
+          <option value="Yes" data-key="option.yeswithlink">Yes – see below</option>
+        </select>
+        <label>Website URL:</label>
+        <input type="text" name="Current Website URL">
+      </div>
+    </form>
+
+<!-- Branding & Content -->
+<form>
+<div class="form-section">
+  <h3 data-key="intake.branding">Branding & Content</h3>
+
+  <label data-key="intake.logo">Do you have a logo?</label>
+  <select name="Has Logo">
+    <option data-key="option.yes">Yes</option>
+    <option data-key="option.no">No</option>
+  </select>
+
+  <label data-key="intake.content">Do you have written content?</label>
+  <select name="Has Content">
+     <option data-key="option.yes">Yes</option>
+     <option data-key="option.no">No</option>
+     <option data-key="option.progress">In Progress</option>
+  </select>
+
+  <label data-key="intake.style">What colors or style do you prefer?</label>
+  <textarea name="Style Preferences" rows="3"></textarea>
+
+  <p><strong data-key="intake.upload">Upload or send your logo/images to:</strong> your@email.com</p>
+</div>
+</form>
+
+<!-- Business Info -->
+<form>
+<div class="form-section">
+  <h3 data-key="intake.businessinfo">Business Info</h3>
+
+  <label data-key="intake.industry">Industry:</label>
+  <input type="text" name="Industry">
+
+  <label data-key="intake.location">City/State Served:</label>
+  <input type="text" name="Location">
+
+  <label data-key="intake.gbp">Help with Google Business Profile?</label>
+  <select name="Needs GBP">
+     <option data-key="option.yes">Yes</option>
+     <option data-key="option.no">No</option>
+     <option data-key="option.unsure">Not Sure</option>
+  </select>
+
+  <label data-key="intake.seo">Need basic SEO setup?</label>
+  <select name="Needs SEO">
+    <option data-key="option.yes">Yes</option>
+    <option data-key="option.no">No</option>
+     <option data-key="option.later">Maybe Later</option>
+  </select>
+</div>
+</form> 
+
+<!-- Timeline & Budget -->
+<form>
+  <div class="form-section">
+  <h3 data-key="intake.timeline">Timeline & Budget</h3>
+
+  <label data-key="intake.launch">Ideal launch date:</label>
+  <input type="text" name="Launch Date" placeholder="MM/DD/YYYY" />
+
+  <label data-key="intake.budget">Estimated budget (optional):</label>
+  <input type="text" name="Budget" placeholder="$100–$1000" />
+
+  <label data-key="intake.questions">Any questions or concerns?</label>
+  <textarea name="Questions" rows="3"></textarea>
+</div>
+
+<!-- Discovery-->
+<div class="form-section">
+  <h3 data-key="intake.discovery">Discovery</h3>
+
+  <label data-key="intake.referral">How did you hear about ZentroFlux?</label>
+  <input type="text" name="Referral" />
+
+  <label data-key="intake.readiness">Are you ready to move forward?</label>
+  <select name="Ready" data-key="intake.readinessOptions">
+    <option data-key="intake.ready.yes">Yes</option>
+    <option data-key="intake.ready.notyet">Not yet</option>
+    <option data-key="intake.ready.exploring">Just exploring</option>
+  </select>
+</div>
+
+<!-- Submit Button -->
+<div style="text-align: center; margin-top: 2rem;">
+    <button type="submit" class="cta-button" data-key="intake.submit">🚀 Submit My Intake</button>
+  </div>
+  <p class="terms-note">
+    <span data-key="intake.termsText">By submitting this form, you agree to our</span>
+    <a href="terms.html" target="_blank" data-key="intake.termsLink">Terms & Conditions</a>.
+  </p>
+</form>
+
+   <!-- Back to Top Button -->
+  <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+
+   <!-- Language & Interaction Scripts -->
+<script>
+    const translations = {
+  en: {
+    "nav.home": "Home",
+    "nav.services": "Services",
+    "nav.contact": "Contact",
+    "nav.about": "About",
+    "nav.business": "Business Website",
+    "nav.promo": "Promo Site",
+    "nav.starter": "Starter Website",
+    "nav.landing": "Landing Page",
+    "nav.hosting": "Hosting & Renewal",
+    "nav.local": "Local Boost Site",
+
+    "service.starter": "Starter Website (1–3 pages)",
+    "service.business": "Business Website (5–7 pages)",
+    "service.promo": "One-Page Promo Site",
+    "service.landing": "One-Page Landing Page",
+    "service.local": "Local Boost Setup",
+    "service.litelocal": "Local Boost Setup [LITE]",
+    "service.hosting": "Hosting/Renewal",
+    "service.maintenance": "Monthly Maintenance",
+
+
+    "option.email": "Email",
+    "option.phone": "Phone",
+    "option.text": "Text",
+    "option.whatsapp": "WhatsApp",
+    "option.yes": "Yes",
+    "option.no": "No",
+    "option.progress": "In Progress",
+    "option.unsure": "Not Sure",
+    "option.later": "Maybe Later",
+    "option.yeswithlink": "Yes – see below",
+
+    "intake.title": "ZentroFlux Client Intake Form",
+    "intake.heading": "ZentroFlux Client Intake Form",
+    "intake.clientinfo": "Client Information",
+    "intake.name": "Full Name:",
+    "intake.business": "Business Name:",
+    "intake.email": "Email Address:",
+    "intake.phone": "Phone Number (optional):",
+    "intake.contact": "Preferred Method of Contact:",
+
+    "intake.project": "Website Project Details",
+    "intake.other": "Other:",
+    "intake.pages": "What pages do you need?",
+    "intake.website": "Do you currently have a website?",
+
+    "intake.branding": "Branding & Content",
+    "intake.style": "What colors or style do you prefer?",
+    "intake.upload": "Upload or send your logo/images to:",
+
+    "intake.businessinfo": "Business Info",
+
+    "intake.timeline": "Timeline & Budget",
+    "intake.launch": "Ideal launch date:",
+    "intake.budget": "Estimated budget (optional):",
+    "intake.questions": "Any questions or concerns?",
+
+    "intake.discovery": "Discovery",
+    "intake.referral": "How did you hear about ZentroFlux?",
+    "intake.ready": "Are you ready to move forward?",
+
+    "intake.launch": "Ideal launch date:",
+    "intake.budget": "Estimated budget (optional):",
+    "intake.questions": "Any questions or concerns?",
+    "intake.referral": "How did you hear about ZentroFlux?",
+    "intake.readiness": "Are you ready to move forward?",
+    "intake.ready.yes": "Yes",
+    "intake.ready.notyet": "Not yet",
+    "intake.ready.exploring": "Just exploring",
+
+    "intake.termsText": "By submitting this form, you agree to our",
+    "intake.termsLink": "Terms & Conditions",
+    "intake.submit": "🚀 Submit My Intake"
+  },
+  es: {
+    "nav.home": "Inicio",
+    "nav.services": "Servicios",
+    "nav.contact": "Contacto",
+    "nav.about": "Acerca de",
+    "nav.business": "Sitio Web Empresarial",
+    "nav.promo": "Sitio Promocional",
+    "nav.starter": "Sitio Inicial",
+    "nav.landing": "Página de Aterrizaje",
+    "nav.hosting": "Dominio y Hosting",
+    "nav.local": "Impulso Local",
+
+    "service.starter": "Sitio Inicial (1–3 páginas)",
+    "service.business": "Sitio Web Empresarial (5–7 páginas)",
+    "service.promo": "Sitio Promocional de Una Página",
+    "service.landing": "Página de Aterrizaje de Una Página",
+    "service.local": "Configuración de Impulso Local",
+    "service.litelocal": "Impulso Local [LITE]",
+    "service.hosting": "Dominio y Renovación",
+    "service.maintenance": "Mantenimiento Mensual",
+
+
+    "option.email": "Correo electrónico",
+    "option.phone": "Teléfono",
+    "option.text": "Texto",
+    "option.whatsapp": "WhatsApp",
+    "option.yes": "Sí",
+    "option.no": "No",
+    "option.progress": "En progreso",
+    "option.unsure": "No estoy seguro",
+    "option.later": "Tal vez después",
+    "option.yeswithlink": "Sí – ver abajo",
+
+
+    "intake.title": "Formulario de Registro de Cliente ZentroFlux",
+    "intake.heading": "Formulario de Registro de Cliente ZentroFlux",
+    "intake.clientinfo": "Información del Cliente",
+    "intake.name": "Nombre Completo:",
+    "intake.business": "Nombre del Negocio:",
+    "intake.email": "Correo Electrónico:",
+    "intake.phone": "Teléfono (opcional):",
+    "intake.contact": "Método de Contacto Preferido:",
+
+    "intake.project": "Detalles del Proyecto Web",
+    "intake.other": "Otro:",
+    "intake.pages": "¿Qué secciones necesitas?",
+    "intake.website": "¿Actualmente tienes un sitio web?",
+
+    "intake.branding": "Marca y Contenido",
+    "intake.style": "¿Qué colores o estilo prefieres?",
+    "intake.upload": "Envía tu logo/imágenes a:",
+
+    "intake.businessinfo": "Información del Negocio",
+
+    "intake.timeline": "Plazo y Presupuesto",
+    "intake.launch": "Fecha ideal de lanzamiento:",
+    "intake.budget": "Presupuesto estimado (opcional):",
+    "intake.questions": "¿Tienes alguna pregunta o inquietud?",
+
+    "intake.discovery": "Descubrimiento",
+    "intake.referral": "¿Cómo nos conociste?",
+    "intake.ready": "¿Estás listo para avanzar?",
+    "intake.launch": "Fecha de lanzamiento ideal:",
+    "intake.budget": "Presupuesto estimado (opcional):",
+    "intake.questions": "¿Alguna pregunta o inquietud?",
+    "intake.referral": "¿Cómo nos conociste?",
+    "intake.readiness": "¿Estás listo para continuar?",
+    "intake.ready.yes": "Sí",
+    "intake.ready.notyet": "Aún no",
+    "intake.ready.exploring": "Solo explorando",
+
+    "intake.termsText": "Al enviar este formulario, aceptas nuestros",
+    "intake.termsLink": "Términos y Condiciones",
+    "intake.submit": "🚀 Enviar Formulario"
+  }
+};
+
+
+ function setLanguage(lang) {
+      localStorage.setItem('preferredLanguage', lang);
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const lang = localStorage.getItem('preferredLanguage') || 'en';
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      applyLanguage();
+
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      animatedElements.forEach(el => observer.observe(el));
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+<script>
+  window.onscroll = function () {
+    const btn = document.getElementById("topBtn");
+    if (!btn) return;
+    btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+      ? "block"
+      : "none";
+  };
+</script>
+
+<script>
+  function redirectThankYou(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = 'thankyou.html';
+      } else {
+        alert('There was a problem submitting the form.');
+      }
+    }).catch(error => {
+      alert('Error: ' + error);
+    });
+  }
+</script>
+</body>
