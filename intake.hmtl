@@ -95,10 +95,9 @@
         <label>Website URL:</label>
         <input type="text" name="Current Website URL">
       </div>
-    </form>
 
 <!-- Branding & Content -->
-<form>
+
 <div class="form-section">
   <h3 data-key="intake.branding">Branding & Content</h3>
 
@@ -120,10 +119,9 @@
 
   <p><strong data-key="intake.upload">Upload or send your logo/images to:</strong> your@email.com</p>
 </div>
-</form>
 
 <!-- Business Info -->
-<form>
+
 <div class="form-section">
   <h3 data-key="intake.businessinfo">Business Info</h3>
 
@@ -146,11 +144,10 @@
     <option data-key="option.no">No</option>
      <option data-key="option.later">Maybe Later</option>
   </select>
-</div>
-</form> 
+</div> 
 
 <!-- Timeline & Budget -->
-<form>
+
   <div class="form-section">
   <h3 data-key="intake.timeline">Timeline & Budget</h3>
 
