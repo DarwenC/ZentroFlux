@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZentroFlux Websites & Hosting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div class="language-toggle" style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; font-size: 0.9rem;">
+    <a href="#" onclick="setLanguage('en')">EN</a> | 
+    <a href="#" onclick="setLanguage('es')">ES</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="zentroflux-logo.png" alt="ZentroFlux Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" data-key="nav.home">Home</a></li>
+        <li class="dropdown">
+          <a href="#services" data-key="nav.services">Services</a>
+          <ul class="dropdown-content">
+              <li><a href="business.html" data-key="nav.business">Business Website</a></li>
+              <li><a href="promo.html" data-key="nav.promo">Promo Site</a></li>
+              <li><a href="starter.html" data-key="nav.starter">Starter Website</a></li>
+              <li><a href="landing.html" data-key="nav.landing">Landing Page</a></li>
+              <li><a href="hosting.html" data-key="nav.hosting">Hosting & Renewal</a></li>
+              <li><a href="localboost.html" data-key="nav.local">Local Boost Site</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" data-key="nav.contact">Contact</a></li>
+        <li><a href="about.html" data-key="nav.about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero fade-in">
+    <div class="hero-text">
+      <h1 data-key="hero.title">Functional, Desirable Websites — Built to Perform</h1>
+      <p data-key="hero.subtitle">Clean design, fast hosting, and full support — from concept to launch.</p>
+      <a href="intake.html" class="cta-button pulse" data-key="hero.cta">🚀 Start Your Project</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services fade-in">
+    <h2 class="section-title" data-key="services.heading">Our Services</h2>
+    <div class="service-cards">
+
+      <!-- Business Website -->
+      <div class="card slide-in-left">
+        <img src="concept1.jpg" alt="Business Website" />
+        <h3 data-key="card.business.title">Business Website</h3>
+        <p data-key="card.business.desc">Multi-page websites tailored to service-based businesses.</p>
+        <ul>
+          <li data-key="card.business.point1">Custom layout</li>
+          <li data-key="card.business.point2">Responsive & SEO-ready</li>
+          <li data-key="card.business.point3">Built to grow with your brand</li>
+        </ul>
+        <a href="business.html" class="card-btn" data-key="card.business.btn">View Service</a>
+      </div>
+
+      <!-- Promo Site -->
+      <div class="card fade-in">
+        <img src="concept2.jpg" alt="Promo Site" />
+        <h3 data-key="card.promo.title">Promo Site</h3>
+        <p data-key="card.promo.desc">One-page scroll sites for events, announcements, or micro-brands.</p>
+        <ul>
+          <li data-key="card.promo.point1">Quick to launch</li>
+          <li data-key="card.promo.point2">Clear CTA focus</li>
+          <li data-key="card.promo.point3">Mobile-first structure</li>
+        </ul>
+        <a href="promo.html" class="card-btn" data-key="card.promo.btn">View Service</a>
+      </div>
+
+      <!-- Starter Website -->
+    <div class="card fade-in">
+      <img src="concept-starter.jpg" alt="Starter Website" />
+      <h3 data-key="card.starter.title">Starter Website</h3>
+      <p data-key="card.starter.desc">A clean 3-page site to help you establish your online presence with ease.</p>
+      <ul>
+        <li data-key="card.starter.point1">Home, About & Contact</li>
+        <li data-key="card.starter.point2">Built-in contact form</li>
+        <li data-key="card.starter.point3">Includes basic SEO</li>
+      </ul>
+      <a href="starter.html" class="card-btn" data-key="card.starter.btn">View Service</a>
+    </div>
+
+    <!-- Landing Page -->
+    <div class="card slide-in-left">
+      <img src="concept-landing.jpg" alt="Landing Page" />
+      <h3 data-key="card.landing.title">Landing Page</h3>
+      <p data-key="card.landing.desc">A focused page built to convert — perfect for lead capture, events, or promos.</p>
+      <ul>
+        <li data-key="card.landing.point1">One clear CTA</li>
+        <li data-key="card.landing.point2">Fast & mobile-ready</li>
+        <li data-key="card.landing.point3">Ideal for ads or signups</li>
+      </ul>
+      <a href="landing.html" class="card-btn" data-key="card.landing.btn">View Service</a>
+    </div>
+
+     <!-- Hosting & Renewal -->
+    <div class="card fade-in">
+      <img src="concept5.jpg" alt="Hosting & Renewal" />
+      <h3 data-key="card.hosting.title">Domain, Hosting & Renewal</h3>
+      <p data-key="card.hosting.desc">We handle everything from setup to SSL — fully managed and worry-free.</p>
+      <ul>
+        <li data-key="card.hosting.point1">Domain + DNS setup</li>
+        <li data-key="card.hosting.point2">Secure HTTPS hosting</li>
+        <li data-key="card.hosting.point3">Annual renewals covered</li>
+      </ul>
+      <a href="hosting.html" class="card-btn" data-key="card.hosting.btn">View Service</a>
+    </div>
+
+    <!-- Local Boost Site -->
+    <div class="card slide-in-right">
+      <img src="concept6.jpg" alt="Local Boost Site" />
+      <h3 data-key="card.local.title">Local Boost Site</h3>
+      <p data-key="card.local.desc">Get found on Google and drive local traffic with SEO-first site design.</p>
+      <ul>
+        <li data-key="card.local.point1">Google Maps & schema</li>
+        <li data-key="card.local.point2">Business info spotlight</li>
+        <li data-key="card.local.point3">Built for local discovery</li>
+      </ul>
+      <a href="localboost.html" class="card-btn" data-key="card.local.btn">View Service</a>
+    </div>
+
+  </div>
+</section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner fade-in">
+    <h2 data-key="cta.title">Let’s Build Something You’re Proud To Share</h2>
+    <p data-key="cta.subtitle">Modern websites made simple, stylish, and effective.</p>
+    <a href="intake.html" class="cta-button pulse bottom-space" data-key="cta.button">🚀 Start Your Project</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-wrapper fade-in">
+    <h2 data-key="contact.title">Contact Us</h2>
+    <p data-key="contact.subtitle">Have a question? Send us a quick message or get started above.</p>
+    <form action="https://formspree.io/f/xldbkgkg" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" data-key="contact.submit">Send Message</button>
+    </form>
+    <p class="note" data-key="contact.note">We respond within 1–2 business days.</p>
+  </section>
+
+    <!-- Back to Top Button -->
+  <button id="topBtn" onclick="scrollToTop()">↑ Top</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#services" data-key="footer.services">Services</a>
+      <a href="#contact" data-key="footer.contact">Contact</a>
+      <a href="about.html" data-key="footer.about">About</a>
+    </div>
+    <p class="footer-note">© 2025 ZentroFlux. All rights reserved.</p>
+  </footer>
+
+ <!-- Language & Interaction Scripts -->
+<script>
+  const translations = {
+    "en": {
+      "nav.home": "Home",
+      "nav.services": "Services",
+      "nav.contact": "Contact",
+      "nav.about": "About",
+      "nav.business": "Business Website",
+      "nav.promo": "Promo Site",
+      "nav.starter": "Starter Website",
+      "nav.landing": "Landing Page",
+      "nav.hosting": "Hosting & Renewal",
+      "nav.local": "Local Boost Site",
+      "hero.title": "Functional, Desirable Websites — Built to Perform",
+      "hero.subtitle": "Clean design, fast hosting, and full support — from concept to launch.",
+      "hero.cta": "🚀 Start Your Project",
+      "services.heading": "Our Services",
+      "card.business.title": "Business Website",
+      "card.business.desc": "Multi-page websites tailored to service-based businesses.",
+      "card.business.point1": "Custom layout",
+      "card.business.point2": "Responsive & SEO-ready",
+      "card.business.point3": "Built to grow with your brand",
+      "card.business.btn": "View Service",
+      "card.promo.title": "Promo Site",
+      "card.promo.desc": "One-page scroll sites for events, announcements, or micro-brands.",
+      "card.promo.point1": "Quick to launch",
+      "card.promo.point2": "Clear CTA focus",
+      "card.promo.point3": "Mobile-first structure",
+      "card.promo.btn": "View Service",
+      "card.starter.title": "Starter Website",
+      "card.starter.desc": "A clean 3-page site to help you establish your online presence with ease.",
+      "card.starter.point1": "Home, About & Contact",
+      "card.starter.point2": "Built-in contact form",
+      "card.starter.point3": "Includes basic SEO",
+      "card.starter.btn": "View Service",
+      "card.landing.title": "Landing Page",
+      "card.landing.desc": "A focused page built to convert — perfect for lead capture, events, or promos.",
+      "card.landing.point1": "One clear CTA",
+      "card.landing.point2": "Fast & mobile-ready",
+      "card.landing.point3": "Ideal for ads or signups",
+      "card.landing.btn": "View Service",
+      "card.hosting.title": "Domain, Hosting & Renewal",
+      "card.hosting.desc": "We handle everything from setup to SSL — fully managed and worry-free.",
+      "card.hosting.point1": "Domain + DNS setup",
+      "card.hosting.point2": "Secure HTTPS hosting",
+      "card.hosting.point3": "Annual renewals covered",
+      "card.hosting.btn": "View Service",
+      "card.local.title": "Local Boost Site",
+      "card.local.desc": "Get found on Google and drive local traffic with SEO-first site design.",
+      "card.local.point1": "Google Maps & schema",
+      "card.local.point2": "Business info spotlight",
+      "card.local.point3": "Built for local discovery",
+      "card.local.btn": "View Service",
+      "cta.title": "Let’s Build Something You’re Proud To Share",
+      "cta.subtitle": "Modern websites made simple, stylish, and effective.",
+      "cta.button": "🚀 Start Your Project",
+      "contact.title": "Contact Us",
+      "contact.subtitle": "Have a question? Send us a quick message or get started above.",
+      "contact.submit": "Send Message",
+      "contact.note": "We respond within 1–2 business days.",
+      "footer.services": "Services",
+      "footer.contact": "Contact",
+      "footer.about": "About"
+    },
+    "es": {
+      "nav.home": "Inicio",
+      "nav.services": "Servicios",
+      "nav.contact": "Contacto",
+      "nav.about": "Acerca de",
+      "nav.business": "Sitio Web Empresarial",
+      "nav.promo": "Sitio Promocional",
+      "nav.starter": "Sitio Inicial",
+      "nav.landing": "Página de Aterrizaje",
+      "nav.hosting": "Dominio y Hosting",
+      "nav.local": "Impulso Local",
+      "hero.title": "Sitios web funcionales y deseables — Diseñados para rendir",
+      "hero.subtitle": "Diseño limpio, alojamiento rápido y soporte total — de la idea al lanzamiento.",
+      "hero.cta": "🚀 Comienza tu Proyecto",
+      "services.heading": "Nuestros Servicios",
+      "card.business.title": "Sitio Web Empresarial",
+      "card.business.desc": "Sitios multipágina diseñados para negocios de servicios.",
+      "card.business.point1": "Diseño personalizado",
+      "card.business.point2": "Responsivo y listo para SEO",
+      "card.business.point3": "Listo para crecer con tu marca",
+      "card.business.btn": "Ver Servicio",
+      "card.promo.title": "Sitio Promocional",
+      "card.promo.desc": "Sitios de una sola página para eventos, anuncios o micro-marcas.",
+      "card.promo.point1": "Rápido de lanzar",
+      "card.promo.point2": "Enfoque claro en el CTA",
+      "card.promo.point3": "Estructura mobile-first",
+      "card.promo.btn": "Ver Servicio",
+      "card.starter.title": "Sitio Inicial",
+      "card.starter.desc": "Un sitio de 3 páginas para establecer tu presencia en línea con facilidad.",
+      "card.starter.point1": "Inicio, Sobre Nosotros y Contacto",
+      "card.starter.point2": "Formulario de contacto integrado",
+      "card.starter.point3": "Incluye SEO básico",
+      "card.starter.btn": "Ver Servicio",
+      "card.landing.title": "Página de Aterrizaje",
+      "card.landing.desc": "Una página enfocada en convertir — ideal para captación de clientes o eventos.",
+      "card.landing.point1": "Un CTA claro",
+      "card.landing.point2": "Rápida y adaptada a móviles",
+      "card.landing.point3": "Perfecta para anuncios o registros",
+      "card.landing.btn": "Ver Servicio",
+      "card.hosting.title": "Dominio, Hosting y Renovación",
+      "card.hosting.desc": "Nos encargamos de todo desde la configuración hasta el SSL — totalmente gestionado.",
+      "card.hosting.point1": "Configuración de dominio y DNS",
+      "card.hosting.point2": "Hosting seguro con HTTPS",
+      "card.hosting.point3": "Renovaciones anuales incluidas",
+      "card.hosting.btn": "Ver Servicio",
+      "card.local.title": "Sitio de Impulso Local",
+      "card.local.desc": "Aparece en Google y atrae tráfico local con un diseño enfocado en SEO.",
+      "card.local.point1": "Google Maps y esquema de datos",
+      "card.local.point2": "Información de negocio destacada",
+      "card.local.point3": "Diseñado para el descubrimiento local",
+      "card.local.btn": "Ver Servicio",
+      "cta.title": "Construyamos algo de lo que estés orgulloso/a",
+      "cta.subtitle": "Sitios modernos hechos simples, elegantes y efectivos.",
+      "cta.button": "🚀 Comienza tu Proyecto",
+      "contact.title": "Contáctanos",
+      "contact.subtitle": "¿Tienes una pregunta? Envíanos un mensaje o comienza arriba.",
+      "contact.submit": "Enviar Mensaje",
+      "contact.note": "Respondemos dentro de 1–2 días hábiles.",
+      "footer.services": "Servicios",
+      "footer.contact": "Contacto",
+      "footer.about": "Acerca de"
+    }
+  };
+
+  function setLanguage(lang) {
+      localStorage.setItem('preferredLanguage', lang);
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const lang = localStorage.getItem('preferredLanguage') || 'en';
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      applyLanguage();
+
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      animatedElements.forEach(el => observer.observe(el));
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+<script>
+  window.onscroll = function () {
+    const btn = document.getElementById("topBtn");
+    if (!btn) return;
+    btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+      ? "block"
+      : "none";
+  };
+</script>
+</body>
