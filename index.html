@@ -340,4 +340,28 @@
       : "none";
   };
 </script>
+
+<script>
+  function redirectThankYou(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = 'thankyou.html';
+      } else {
+        alert('There was a problem submitting the form.');
+      }
+    }).catch(error => {
+      alert('Error: ' + error);
+    });
+  }
+</script>
+  
 </body>
